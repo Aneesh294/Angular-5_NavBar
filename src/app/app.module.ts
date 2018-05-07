@@ -1,18 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 
 import { AppComponent } from './app.component';
-
+import { HomeComponent } from '../app/home/home.component';
+import { ServicesComponent } from  '../app/services/services.component';
+import { ProductsComponent } from '../app/products/products.component';
+import { ContactsComponent } from '../app/contact/contact.component';
+import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    ServicesComponent,
+    ProductsComponent,
+    ContactsComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    MDBBootstrapModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [ NO_ERRORS_SCHEMA ]
 })
 export class AppModule { }
